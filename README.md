@@ -1,18 +1,5 @@
-Questo progetto implementa un **sommatore Carry-Select a 16 bit** in VHDL.
-IL CARRY-SELECT È UN CIRCUITO ADDIZIONATORE UTILIZZATO NELL'ELETTRONICA DIGITALE PER 
-SOMMARE DUE NUMERI BINARI. È PROGETTATO PER RIDURRE IL RITARDO NEL CALCOLO DELLA 
-SOMMA DI DUE NUMERI BINARI, SPECIALMENTE QUANDO I NUMERI SONO ABBASTANZA LUNGHI.  
-IN QUESTO CIRCUITO, SONO STATI UTILIZZATI TRE SOMMATORI RIPPLE CARRY A 8 BIT. IL PRIMO 
-SOMMATORE CALCOLA LA SOMMA DEI BIT MENO SIGNIFICATIVI E PRODUCE SIA LA SOMMA PARZIALE 
-CHE UN CARRY-OUT. GLI ALTRI DUE SOMMATORI LAVORANO SIMULTANEAMENTE AL PRIMO E 
-GESTISCONO I BIT PIÙ SIGNIFICATIVI. UNO DI ESSI ASSUME UN CARRY-IN DI VALORE 0, MENTRE 
-L'ALTRO ASSUME UN CARRY-IN DI VALORE 1.DI CONSEGUENZA, OGNI COPPIA DI BIT PIÙ 
-SIGNIFICATIVI VIENE SOMMATA DUE VOLTE, UNA VOLTA CONSIDERANDO UN CARRY-IN DI VALORE 0 
-E L'ALTRA CONSIDERANDO UN CARRY-IN DI VALORE 1. PER CIASCUNA DI QUESTE COPPIE, È STATO 
-UTILIZZATO UN MULTIPLEXER PER DETERMINARE QUALE DEI DUE RISULTATI DELLA SOMMA È 
-CORRETTO, IN BASE AL VALORE DEL CARRY-OUT OTTENUTO DAL SOMMATORE PRECEDENTE.INFINE, 
-UN ULTIMO MULTIPLEXER È UTILIZZATO PER SELEZIONARE TRA I DUE POSSIBILI CARRY DI USCITA DAI 
-SOMMATORI DEI BIT PIÙ SIGNIFICATIVI E DETERMINARE QUALE DI ESSI DOVREBBE ESSERE 
-CONSIDERATO COME CARRY DI USCITA COMPLESSIVO DEL SOMMATORE A CASCATA. LA SELEZIONE 
-AVVIENE IN BASE AL VALORE DEL CARRY-IN ("C7") PROVENIENTE DAL SOMMATORE A 8 BIT MENO 
-SIGNIFICATIVO.  
+Questo progetto implementa un sommatore carry-select a 16 bit in VHDL. Il carry-select è un circuito addizionatore utilizzato nell'elettronica digitale per sommare due numeri binari. È progettato per ridurre il ritardo nel calcolo della somma di due numeri binari, specialmente quando i numeri sono abbastanza lunghi. 
+
+In questo circuito, sono stati utilizzati tre sommatori ripple carry a 8 bit. Il primo sommatore calcola la somma dei bit meno significativi e produce sia la somma parziale che un carry-out. Gli altri due sommatori lavorano simultaneamente al primo e gestiscono i bit più significativi. Uno di essi assume un carry-in di valore 0, mentre l'altro assume un carry-in di valore 1. Di conseguenza, ogni coppia di bit più significativi viene sommata due volte, una volta considerando un carry-in di valore 0 e l'altra considerando un carry-in di valore 1. 
+
+Per ciascuna di queste coppie, è stato utilizzato un multiplexer per determinare quale dei due risultati della somma è corretto, in base al valore del carry-out ottenuto dal sommatore precedente. Infine, un ultimo multiplexer è utilizzato per selezionare tra i due possibili carry di uscita dai sommatori dei bit più significativi e determinare quale di essi dovrebbe essere considerato come carry di uscita complessivo del sommatore a cascata. La selezione avviene in base al valore del carry-in ("C7") proveniente dal sommatore a 8 bit meno significativo.
